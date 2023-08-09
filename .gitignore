@@ -164,3 +164,5 @@ cython_debug/
 
 #For JetBrains IDEs
 .idea
+
+*.csv
