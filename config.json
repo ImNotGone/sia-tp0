@@ -1,0 +1,22 @@
+{
+  "ej1-a": {
+      "csv": "ej1-a.csv",
+      "rerun": true
+  },
+  "ej2-a": {
+      "csv": "ej2-a.csv",
+      "rerun": true,
+      "config": ["pokeball", "snorlax", 1000, 1]
+  },
+  "ej2-b": {
+      "csv": "ej2-b.csv",
+      "rerun": true,
+      "config": ["pokeball", "snorlax", 0.15, 100]
+  },
+  "ej2-d": {
+      "csv": "ej2-d.csv",
+      "rerun": true,
+      "config": ["caterpie", 100]
+  }
+
+}
