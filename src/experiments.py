@@ -6,6 +6,7 @@ from .catching import attempt_catch
 
 # ----------------------------------- Ej 1-a -----------------------------------
 
+
 def pokeball_in_ideal_conditions_experiment(output_file: str):
     factory = PokemonFactory("pokemon.json")
 
@@ -27,9 +28,9 @@ def pokeball_in_ideal_conditions_experiment(output_file: str):
 
     iterations = 100
 
-    for balls, pokemon in product(balls, pokemons):
+    for ball, pokemon in product(balls, pokemons):
         catch_rate = np.average(
-            [attempt_catch(pokemon, balls)[0] for _ in range(iterations)]
+            [attempt_catch(pokemon, ball)[0] for _ in range(iterations)]
         )
         data.append([catch_rate, pokemon.name, balls])
 
