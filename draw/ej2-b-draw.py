@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-csv_file = "data/ej2-b.csv"
+csv_file = "../data/ej2-b.csv"
 data = pd.read_csv(csv_file)
 
 hp_values = data["hp"]
