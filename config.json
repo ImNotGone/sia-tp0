@@ -1,10 +1,13 @@
 {
+  "data_path": {
+    "path": "./data"
+  },
   "pokeball_in_ideal_conditions_experiment": {
-    "csv": "data/ej1-a.csv",
+    "csv": "ej1-a.csv",
     "rerun": true
   },
   "variating_status_experiment": {
-    "csv": "data/ej2-a.csv",
+    "csv": "ej2-a.csv",
     "rerun": true,
     "pokemon": "snorlax",
     "ball": "pokeball",
@@ -13,7 +16,7 @@
     "iterations": 1000
   },
   "variating_hp_experiment": {
-    "csv": "data/ej2-b.csv",
+    "csv": "ej2-b.csv",
     "rerun": true,
     "ball": "pokeball",
     "pokemon": "snorlax",
@@ -21,9 +24,9 @@
     "iterations": 1000
   },
   "variating_everything_experiment": {
-    "csv": "data/ej2-d.csv",
+    "csv": "ej2-d.csv",
     "rerun": true,
     "pokemon": "snorlax",
-    "iterations": 1000
+    "iterations": 100
   }
 }
