@@ -59,11 +59,10 @@ def variating_status_experiment(
         writer.writerow(["status", "catchRate"])
 
         factory = PokemonFactory("pokemon.json")
-        status = ["POISON", "BURN", "PARALYSIS", "SLEEP", "FREEZE", "NONE"]
 
-        for stat in status:
+        for stat in StatusEffect:
             pokemon = factory.create(
-                pokemon_name, level, StatusEffect[stat], hp_percentage
+                pokemon_name, level, stat, hp_percentage
             )
 
             catches = 0
@@ -108,19 +107,12 @@ def variating_everything_experiment(
     factory = PokemonFactory("pokemon.json")
     pokemon = factory.create(pokemon_name, 1, StatusEffect.NONE, 1)
 
-    status = [
-        StatusEffect.BURN,
-        StatusEffect.SLEEP,
-        StatusEffect.POISON,
-        StatusEffect.FREEZE,
-        StatusEffect.PARALYSIS,
-    ]
     balls = ["pokeball", "ultraball", "fastball", "heavyball"]
 
     header = ["pokemon", "status_effect", "hp", "level", "pokeball", "success_rate"]
     data = []
 
-    for stat in status:
+    for stat in StatusEffect:
         pokemon.status_effect = stat
         for current_hp in range(1, pokemon.max_hp):
             pokemon.current_hp = current_hp
