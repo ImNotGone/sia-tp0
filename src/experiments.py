@@ -1,5 +1,6 @@
 import csv
 import numpy as np
+import math
 from itertools import product
 from .pokemon import PokemonFactory, StatusEffect
 from .catching import attempt_catch
@@ -79,13 +80,13 @@ def variating_hp_experiment(
 ):
     with open(output_file, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["hp", "catch_rate", "std"])
+        writer.writerow(["hp_percentage", "catch_rate", "std"])
 
         factory = PokemonFactory("pokemon.json")
         pokemon = factory.create(pokemon_name, 100, StatusEffect.NONE, 1)
 
-        for hp in range(1, pokemon.max_hp):
-            pokemon.current_hp = hp
+        for hp_percentage in range(1, 101):
+            pokemon.current_hp = math.floor(pokemon.max_hp * hp_percentage / 100)
 
             results = np.array(
                 [attempt_catch(pokemon, ball, noise)[1] for _ in range(iterations)]
@@ -93,7 +94,7 @@ def variating_hp_experiment(
             catch_rate = np.average(results)
             std = np.std(results)
 
-            writer.writerow([hp, catch_rate, std])
+            writer.writerow([hp_percentage, catch_rate, std])
 
 
 # ----------------------------------- Ej 2-d -----------------------------------
