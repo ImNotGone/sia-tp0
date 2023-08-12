@@ -14,8 +14,7 @@ for i, value in enumerate(catch_rate):
     plt.text(i, value, str(value), ha='center', va='bottom')
 
 plt.xlabel("Status Effect")
-plt.ylabel("Catch Rate")
-plt.title("Catch Rate and Status Effect")
-
+plt.ylabel("Average Catch Rate")
+plt.title("Average Catch Rate vs. Status Effect")
 
 plt.show()

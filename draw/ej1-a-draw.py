@@ -26,11 +26,8 @@ plt.errorbar(
 
 plt.xlabel("Pokeball")
 plt.ylabel("Average Catch Rate")
-plt.title("Average Catch Rate for each Pokeball")
+plt.title("Average Catch Rate vs. Pokeball")
 plt.grid()
 plt.legend()
 
 plt.show()
-
-
-
