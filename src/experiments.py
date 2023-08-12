@@ -69,7 +69,7 @@ def variating_status_experiment(
                 [attempt_catch(pokemon, ball)[0] for _ in range(iterations)]
             )
 
-            writer.writerow([stat, catch_rate])
+            writer.writerow([stat.name, catch_rate])
 
 
 # ----------------------------------- Ej 2-b -----------------------------------
