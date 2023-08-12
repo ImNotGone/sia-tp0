@@ -33,7 +33,7 @@ def pokeball_in_ideal_conditions_experiment(output_file: str):
         catch_rate = np.average(
             [attempt_catch(pokemon, ball)[0] for _ in range(iterations)]
         )
-        data.append([catch_rate, pokemon.name, balls])
+        data.append([catch_rate, pokemon.name, ball])
 
     # save data to csv
     with open(output_file, "w") as file:
