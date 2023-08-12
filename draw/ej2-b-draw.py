@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 csv_file = "../data/ej2-b.csv"
 data = pd.read_csv(csv_file)
 
-hp_values = data["hp"]
+hp_values = data["hp_percentage"]
 average_values = data["catch_rate"]
 std_dev_values = data["std"]
 
